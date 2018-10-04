@@ -32,14 +32,14 @@ public class jdbcmysql {
 			
 			while (res.next()) {
 				System.out.println(res.getString("account") +" "+res.getString("password") +" "+res.getString("email"));
-				System.out.println("¦L¥X¸ê®Æ®w");
+				System.out.println("å°å‡ºè³‡æ–™åº«");
 			}
 			*/
 			
-			System.out.println("·s¼W¸ê®Æ¦¨¥\");
+			System.out.println("æ–°å¢žè³‡æ–™æˆåŠŸ");
 			
 		} catch (Exception e) {
-			System.out.println("³s±µ¥¢±Ñ");
+			System.out.println("é€£æŽ¥å¤±æ•—");
 			e.printStackTrace();
 		}
 	}
@@ -53,25 +53,25 @@ public class jdbcmysql {
 			con =DriverManager.getConnection(url,"root","888888");
 			
 			if(!con.isClosed()) {
-				System.out.println("³s±µ¦¨¥\");
+				System.out.println("é€£æŽ¥æˆåŠŸ");
 			}
 			
-			String a="aab";
+			String a=ra;
 			Statement stt=con.createStatement();							
-			ResultSet res =stt.executeQuery("SELECT * FROM user_db WHERE account='aab'");
+			ResultSet res =stt.executeQuery("SELECT * FROM user_db WHERE account='"+a+"'");
 		
-			only="³s±µ¦¨¥\";
-			if(res.next()){                   //¤wµù¥Uªº±b¸¹(¦³§ä¨ì¬Û¦Pªº->true
+			only="é€£æŽ¥æˆåŠŸ";
+			if(res.next()){                   //å·²è¨»å†Šçš„å¸³è™Ÿ(æœ‰æ‰¾åˆ°ç›¸åŒçš„->true
 				System.out.println(res.getString("account") );
 				only="true";
-			}else {                              //¨Sµù¥Uªº±b¸¹->false
+			}else {                              //æ²’è¨»å†Šçš„å¸³è™Ÿ->false
 				only="false";
 				System.out.println("NO data");
 			}
 		} catch (Exception e) {
-			System.out.println("³s±µ¥¢±Ñ");
+			System.out.println("é€£æŽ¥å¤±æ•—");
 			e.printStackTrace();
-			only="¨S³s¤WDB";
+			only="æ²’é€£ä¸ŠDB";
 		}
 		return only;
 	}
@@ -84,25 +84,25 @@ public class jdbcmysql {
 			con =DriverManager.getConnection(url,"root","888888");
 			
 			if(!con.isClosed()) {
-				System.out.println("³s±µ¦¨¥\");
+				System.out.println("é€£æŽ¥æˆåŠŸ");
 			}
 			
 			String a="aab";
 			Statement stt=con.createStatement();							
 			ResultSet res =stt.executeQuery("SELECT * FROM user_db WHERE account='aab'");
 		
-			only="³s±µ¦¨¥\";
-			if(res.next()){                   //¤wµù¥Uªº±b¸¹(¦³§ä¨ì¬Û¦Pªº->true
+			only="é€£æŽ¥æˆåŠŸ";
+			if(res.next()){                   //å·²è¨»å†Šçš„å¸³è™Ÿ(æœ‰æ‰¾åˆ°ç›¸åŒçš„->true
 				System.out.println(res.getString("account") );
 				only="true";
-			}else {                              //¨Sµù¥Uªº±b¸¹->false
+			}else {                              //æ²’è¨»å†Šçš„å¸³è™Ÿ->false
 				only="false";
 				System.out.println("NO data");
 			}
 		} catch (Exception e) {
-			System.out.println("³s±µ¥¢±Ñ");
+			System.out.println("é€£æŽ¥å¤±æ•—");
 			e.printStackTrace();
-			only="¨S³s¤W";
+			only="æ²’é€£ä¸Š";
 		}
 		
 	}*/
